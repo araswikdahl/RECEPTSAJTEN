@@ -1,0 +1,5 @@
+GET http://localhost:4000/recipes
+
+###
+
+GET http://localhost:4000/recipes/6273d50a3ffa62289f27bfc5
