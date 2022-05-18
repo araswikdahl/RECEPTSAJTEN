@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import {RecipeType} from '../types';
 import styled from 'styled-components';
+import { NavLink} from 'react-router-dom';
 
     const Card = styled.div`
     margin-bottom:5rem;
@@ -36,7 +37,6 @@ import styled from 'styled-components';
     flex-wrap:wrap;
     background-color:#F9F8F1;
     width:90%;
-    /* height:100vh; */
     `;
     const CategoryWrapper = styled.div`
     display:flex;
@@ -94,17 +94,19 @@ const FetchRecipes =()=> {
                 </CategoryWrapper>
 
             <Wrapper>
-            {recipes.map((recipe)=> {
+                {recipes.map((recipe)=> {
                 return(
-                    <Card key={recipe._id}>
-                        <img src={recipe.imageUrl} width={200} alt=""/> 
-                        <div>
-                            <p>{recipe.title}</p>
-                            {/* <p>{recipe.timeInMins}min</p> */}
-                        </div>       
-                    </Card>
-                );
-            })}
+                    <NavLink to ={`/Recipe/${recipe._id}`}>
+                         <Card key={recipe._id}>
+                            <img src={recipe.imageUrl} width={200} alt=""/> 
+                            <div>
+                                <p>{recipe.title}</p>
+                                {/* <p>{recipe.timeInMins}min</p> */}
+                            </div>       
+                        </Card>
+                    </NavLink>    
+                 );
+                 })}
             </Wrapper>
         </Main>
            

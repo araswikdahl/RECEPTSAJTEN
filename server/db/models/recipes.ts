@@ -10,7 +10,7 @@ export interface RecipeType {
     timeInMins:Number,
     ratings:Array<number>,
     category:Array<string>,
-    ingredients:[{name:string, amout: number, unit:string}],
+    ingredients:[{name:string, amount: number, unit:string}],
     instructions:Array<string>,
     comments:any
 }

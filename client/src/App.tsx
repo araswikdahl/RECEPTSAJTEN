@@ -7,14 +7,17 @@ import Search from './components/search'
 // import FetchRecipes from './components/FetchRecipes'
 // import Home from './pages/Home'
 import Pages from './pages/pages'
+import { BrowserRouter} from 'react-router-dom';
 
 
 const App =()=> {
 
-  return<>
+  return(<>
+   <BrowserRouter> 
   <Pages/>
+  </BrowserRouter> 
   {/* <FetchRecipes/> */}
-  </>
+  </>)
   }
 
 export default App;
