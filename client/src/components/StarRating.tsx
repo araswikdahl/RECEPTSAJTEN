@@ -24,11 +24,11 @@ const StarRating =()=> {
     const [hover, setHover] = useState<any>(null); 
   
   
-    // const handler =()=>{
+    // const handler =(rat:any)=>{
     // fetch('http://localhost:4000/recipes'),{
     //     metod:'POST',
     //     headers: {"content-Type": "application/json"},
-    //     body:JSON.stringify(rating)
+    //     body:JSON.stringify(rat)
     // }
 
     // };
@@ -43,7 +43,7 @@ const StarRating =()=> {
                 name="rating"
                 value={ratingValue}
                 onClick={()=>[setRating(ratingValue)]}
-                // onClick={()=>[setRating(ratingValue), handler()]}
+                // onClick={()=>[setRating(ratingValue), handler(rating)]}
                />
                 <FaStar className="star"
                 color={ratingValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"}

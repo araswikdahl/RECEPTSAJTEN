@@ -4,7 +4,8 @@ import categoryRouter from './Routes/category';
 import cors from 'cors'
 
 import { connect } from 'mongoose'
-connect('mongodb://localhost:27017/Recept')
+connect('mongodb+srv://SaraWikdahl:ZBBGFr7EBmuQ3cxC@cluster0.2sq41.mongodb.net/Recept?retryWrites=true&w=majority')
+// connect('mongodb://localhost:27017/Recept')
 
 
 const app = express();
@@ -12,7 +13,8 @@ const app = express();
 app.use(cors())
 
 app.use(json());
-const port = 4000
+// const port = 4000
+const port = process.env.PORT || 4000
 
 //routes
 app.use('/recipes', recipeRouter);
@@ -21,5 +23,5 @@ app.use('/:id', recipeRouter);
 
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Example app listening on port +port ${port}`)
 })
