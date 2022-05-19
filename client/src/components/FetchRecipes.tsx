@@ -2,6 +2,8 @@ import {useState, useEffect} from 'react'
 import {RecipeType} from '../types';
 import styled from 'styled-components';
 import { NavLink} from 'react-router-dom';
+import Categories from '../components/Categories';
+
 
     const Card = styled.div`
     margin-bottom:5rem;
@@ -26,9 +28,13 @@ import { NavLink} from 'react-router-dom';
         display:flex;
         flex-direction:column;
         justify-content:space-between;
+        text-decoration:none;
     }
 
     `;
+
+    
+
     const Wrapper = styled.div`
     margin:auto;
     display:flex;
@@ -37,16 +43,19 @@ import { NavLink} from 'react-router-dom';
     flex-wrap:wrap;
     background-color:#F9F8F1;
     width:90%;
-    `;
-    const CategoryWrapper = styled.div`
-    display:flex;
-    margin:2rem auto 5rem auto;
-    p{
-        padding:1.3rem;
-        font-size:24px;
+    a{
+        text-decoration:none;
     }
-
     `;
+    // const CategoryWrapper = styled.div`
+    // display:flex;
+    // margin:2rem auto 5rem auto;
+    // p{
+    //     padding:1.3rem;
+    //     font-size:24px;
+    // }
+
+    // `;
 
     const Main = styled.main`
      /* border-top: 4px solid #e4910272; */
@@ -64,7 +73,7 @@ import { NavLink} from 'react-router-dom';
   padding:1rem;
 
     `;
-
+  
     
 const FetchRecipes =()=> {
     const [ recipes, setRecipes] = useState<RecipeType[]>([]);
@@ -84,14 +93,16 @@ const FetchRecipes =()=> {
   
     return<>
         <Main>
-            <h3>KATEGORIER</h3>
+        <Categories/>
+            {/* <h3>KATEGORIER</h3>
+    
                 <CategoryWrapper>
                   <p>Soppa</p>
                   <p>Pasta</p>
                   <p>Paj</p>
                   <p>Grytor</p>
                   <p>Halloumi</p>
-                </CategoryWrapper>
+                </CategoryWrapper> */}
 
             <Wrapper>
                 {recipes.map((recipe)=> {

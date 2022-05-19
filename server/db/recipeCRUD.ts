@@ -43,7 +43,14 @@ return recipes;
 //CATEGORY
 
 export const getCategories = async () => {
-    return await RecipeModel.find().distinct('category')
+    const categories = await RecipeModel.aggregate([
+        { $match: {} },
+        { $unwind: '$category' },
+        { $group: { _id: '$category', count: { $sum: 1 } } },
+        { $sort: { count: -1 } }
+    ]);
+    return categories
+    // return await RecipeModel.find().distinct('category')
   }
 
 export const getRecipesCategory = async (category:string) => {

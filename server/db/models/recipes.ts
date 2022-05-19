@@ -11,7 +11,9 @@ export interface RecipeType {
     ratings:Array<number>,
     category:Array<string>,
     ingredients:[{name:string, amount: number, unit:string}],
-    instructions:Array<string>,
+    // instructions:Array<string>,
+    instructions:[{instructions:string, order:number}],
+
     comments:any
 }
 
@@ -23,7 +25,8 @@ const schema = new Schema <RecipeType>({
     ratings: { type: [Number], required: true},
     category: { type: [String], required: true},
     ingredients: { type: [Object], required: true},
-    instructions: { type: [String], required: true},
+    // instructions: { type: [String], required: true},
+    instructions: { type: [Object], required: true},
     comments: { type: Array, required: true},
 })
 
