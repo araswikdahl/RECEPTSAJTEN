@@ -5,7 +5,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 
 import { connect } from 'mongoose'
-connect('mongodb+srv://SaraWikdahl:ZBBGFr7EBmuQ3cxC@cluster0.2sq41.mongodb.net/Recept?retryWrites=true&w=majority')
+// connect('mongodb+srv://SaraWikdahl:ZBBGFr7EBmuQ3cxC@cluster0.2sq41.mongodb.net/Recept?retryWrites=true&w=majority')
 // connect('mongodb://localhost:27017/Recept')
 
 dotenv.config();
