@@ -7,12 +7,11 @@ import StarRating from '../components/StarRating'
 
 
     const Card = styled.div`
-    /* margin-bottom:2rem; */
     margin: 1rem;
     background-color:white;
     color:#173825;
     font-size:23px;
-    width: 24.5rem;
+    width: 23.5rem;
     height: 32rem;
     box-sizing:border-box;
     box-shadow: 0 2px 3px 0 rgb(0 0 0 / 23%);
@@ -36,12 +35,10 @@ import StarRating from '../components/StarRating'
     const Wrapper = styled.div`
     margin:auto;
     display:flex;
-    /* justify-content:space-between; */
     align-items:center;
     justify-content:center;
     flex-wrap:wrap;
     background-color:#F9F8F1;
-    /* width:90%; */
     max-width:100%;
         a{
             text-decoration:none;
