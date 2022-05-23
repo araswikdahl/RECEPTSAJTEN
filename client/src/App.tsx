@@ -11,7 +11,7 @@ import { BrowserRouter} from 'react-router-dom';
 
 
 const App =()=> {
-
+console.log("hej",process.env.REACT_APP_API_BASE_URL);
   return(<>
    <BrowserRouter> 
   <Pages/>

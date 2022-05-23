@@ -82,7 +82,7 @@ const Searched=()=> {
       
         useEffect (()=>{
           const loadSearched = async ()=>{
-            const res = await fetch (`http://localhost:4000/recipe/search/${searched}`)
+            const res = await fetch (`${process.env.REACT_APP_API_BASE_URL}/recipe/search/${searched}`)
             .then(data => data.json());
             console.log(res,res.data)
             setSearchedRecipe(res);

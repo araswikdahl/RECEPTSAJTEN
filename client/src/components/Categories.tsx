@@ -45,7 +45,7 @@ const Categories = () =>{
   
     useEffect (()=>{
       const loadCategory = async ()=>{
-        const res = await fetch ('http://localhost:4000/category')
+        const res = await fetch (`${process.env.REACT_APP_API_BASE_URL}/category`)
         .then(data => data.json());
         console.log(res,res.data)
         setCategory(res);

@@ -46,7 +46,7 @@ const StarRating =(props:any)=> {
     const handler=(rating:number, id:string)=>{
         console.log(rating, id, 'í handlr');
         
-        fetch(`http://localhost:4000/${id}/ratings`,{
+        fetch(`${process.env.REACT_APP_API_BASE_URL}/${id}/ratings`,{
             method:'POST',
             headers: {"Content-Type": "application/json"},
             body:JSON.stringify({

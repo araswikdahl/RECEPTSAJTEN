@@ -79,7 +79,7 @@ const CategoryPage=()=> {
   
     useEffect (()=>{
       const loadCategoryRecipe = async ()=>{
-        const res = await fetch (`http://localhost:4000/category/${categories}/recipes`)
+        const res = await fetch (`${process.env.REACT_APP_API_BASE_URL}/category/${categories}/recipes`)
         .then(data => data.json());
         // console.log(res,res.data)
         console.log(categories)
