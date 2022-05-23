@@ -13,7 +13,8 @@ function pages() {
             <Route path="/" element={<Home/>} />
             <Route path="/Recipe" element={<RecipePage/>} />
             <Route path="/Recipe/:id" element={<RecipePage/>} />
-            <Route path="/category/:categoryId" element={<CategoryPage/>} />
+            {/* <Route path="/category/:categoryId" element={<CategoryPage/>} /> */}
+            <Route path="/category/:categories" element={<CategoryPage/>} />
             <Route path="/searched/:searched" element={<Searched/>} />       
         </Routes>
       </>
