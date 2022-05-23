@@ -44,7 +44,9 @@ const StarRating =(props:any)=> {
 
 
     const handler=(rating:number, id:string)=>{
-        fetch(`http://localhost:4000/ratings`,{
+        console.log(rating, id, 'í handlr');
+        
+        fetch(`http://localhost:4000/${id}/ratings`,{
             method:'POST',
             headers: {"Content-Type": "application/json"},
             body:JSON.stringify({
@@ -66,7 +68,7 @@ const StarRating =(props:any)=> {
                 name="rating"
                 value={ratingValue}
                 // onClick={()=>[setRating(ratingValue)]}
-                onClick={()=>[setRating(ratingValue), handler(rating, id)]}
+                onClick={()=>[setRating(ratingValue), handler(ratingValue, id)]}
                />
                 <FaStar className="star"
                 color={ratingValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"}
