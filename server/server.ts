@@ -31,7 +31,7 @@ if (process.env.MONGO_DB_CONNECTION_STRING) {
 app.use('/recipes', recipeRouter);
 app.use('/category', categoryRouter);
 app.use('/:id', recipeRouter);
-// app.use('/ratings', recipeRouter);
+app.use('/ratings', recipeRouter);
 
 
 // app.listen(port, () => {

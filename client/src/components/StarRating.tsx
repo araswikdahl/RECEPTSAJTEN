@@ -23,6 +23,8 @@ const StarContainer =styled.div`
 
 const StarRating =(props:any)=> {
     const id = props.id
+    // const rat = props.ratingprop
+
     const params = useParams()
 
     const [rating, setRating] = useState<any>(null);

@@ -137,7 +137,7 @@ const Recipe = () => {
 
     useEffect(() => {
         const loadRecipe = async () => {
-            const res = await fetch(`http://localhost:4000/recipes/${params.id}`)
+            const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/recipes/${params.id}`)
                 .then(data => data.json());
             console.log(res, res.data)
             setRecipe(res);
@@ -160,6 +160,7 @@ const Recipe = () => {
                     <RecipeContent>
                         <TitleStyle>{recipe.title}</TitleStyle>
                             <SectionStyle>
+                                {/* <StarRating id={params.id} ratingprop={recipe.ratings}/> */}
                                 <StarRating id={params.id}/>
                                 <div>
                                     <svg width="24" height="24" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
